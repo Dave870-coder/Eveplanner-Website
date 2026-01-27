@@ -27,11 +27,11 @@ function renderServices() {
   shuffled.forEach(s => {
     const card = document.createElement('div');
     card.className = 'service-card';
-    // Generate a relevant random image URL using Unsplash
+    // Generate a relevant featured image URL using Unsplash
     const keyword = s.name.toLowerCase().split(' ')[0]; // Take first word as keyword
-    const randomImg = `https://source.unsplash.com/300x200/?${keyword}`;
+    const randomImg = `https://source.unsplash.com/featured/300x200/?${keyword}`;
     card.innerHTML = `
-      <img src="${randomImg}" alt="${s.name}" loading="lazy">
+      <img src="${randomImg}" alt="${s.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=Image+Loading...'">
       <h3>${s.name}</h3>
       <p>${s.desc}</p>
     `;
