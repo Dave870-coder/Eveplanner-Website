@@ -1,0 +1,222 @@
+/* General page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #2c3e50;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f1c40f;
+}
+
+/* Page container */
+.container {
+    padding: 40px;
+}
+
+/* Hero section */
+.hero {
+    background-color: #34495e;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Buttons */
+.btn {
+    background-color: #f1c40f;
+    color: #2c3e50;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #d4ac0d;
+}
+
+/* Card layout */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+/* Form styling */
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+form button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+}
+
+/* Professional form/card layout */
+.card {
+    background: white;
+    padding: 24px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(44,62,80,0.08);
+}
+
+.form-card { max-width: 820px; margin-left: auto; margin-right: auto; }
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group { display: flex; flex-direction: column; }
+.form-group label { font-weight: 600; margin-bottom: 6px; color: #2c3e50; }
+
+form input, form textarea, form select {
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+    background: #fff;
+}
+
+form textarea { min-height: 110px; resize: vertical; }
+
+form input:focus, form textarea:focus, form select:focus {
+    outline: none;
+    border-color: #aab7c4;
+    box-shadow: 0 0 0 3px rgba(161,179,196,0.12);
+}
+
+/* Primary button */
+.btn-primary {
+    background-color: #f1c40f;
+    color: #2c3e50;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn-primary:hover { background-color: #d4ac0d; }
+
+.contact-info { margin-bottom: 16px; color: #444; }
+.contact-info a { color: #2c3e50; text-decoration: none; font-weight:600 }
+.contact-info a:hover { text-decoration: underline; }
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .form-card { padding: 18px; }
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Global refinements — overrides to make pages look more professional */
+.container { max-width: 1100px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
+
+/* Nav centered and compact */
+nav { display:flex; justify-content:center; align-items:center; padding:12px 0; }
+nav a { margin: 0 18px; font-weight:700; color: #fff; }
+
+/* Headings */
+h1 { font-size: 42px; margin-bottom:8px; }
+h2 { font-size: 24px; margin-top: 0; }
+
+/* Hero refinements */
+.hero { padding: 64px 20px; background: linear-gradient(135deg,#2f3f52 0%,#34495e 100%); }
+.hero .btn { border: 1px solid rgba(255,255,255,0.12); }
+
+/* Content cards */
+.card { box-shadow: 0 10px 30px rgba(31,44,56,0.06); }
+
+/* List styling */
+ul { padding-left: 20px; }
+ul li { margin-bottom: 8px; }
+
+@media (max-width:720px) {
+    .hero { padding: 44px 12px; }
+    h1 { font-size: 30px; }
+}
+
+/* Testimonials */
+.testimonial {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.testimonial p { font-style: italic; margin-bottom: 10px; }
+.testimonial cite { font-weight: bold; color: #2c3e50; }
+
+/* Scroll to top button */
+#scroll-to-top:hover { background: #d4ac0d; }
+
+/* Service cards */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.service-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.service-card h3 {
+    margin: 15px;
+    font-size: 18px;
+    color: #2c3e50;
+}
+.service-card p {
+    margin: 0 15px 15px;
+    color: #666;
+}
+

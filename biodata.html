@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bio‑Data Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services & FAQs</a>
+    <a href="contact.html">Contact</a>
+    <a href="biodata.html">Bio‑Data</a>
+</nav>
+
+<div class="container">
+    <h2>Client Bio‑Data Form</h2>
+    <p>Please fill this form to help us understand your event needs better.</p>
+
+    <div class="card form-card">
+        <form id="biodata-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="fullName">Full name</label>
+                    <input id="fullName" name="fullName" type="text" placeholder="Jane Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="" disabled selected>Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Prefer not to say</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <input id="phone" name="phone" type="tel" placeholder="+234 800 000 0000">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Home address</label>
+                    <input id="address" name="address" type="text" placeholder="Street, City">
+                </div>
+                <div class="form-group">
+                    <label for="eventType">Type of event</label>
+                    <input id="eventType" name="eventType" type="text" placeholder="Wedding, Birthday, Corporate">
+                </div>
+
+                <div class="form-group">
+                    <label for="eventDate">Event date</label>
+                    <input id="eventDate" name="eventDate" type="date">
+                </div>
+                <div class="form-group">
+                    <label for="eventLocation">Event location</label>
+                    <input id="eventLocation" name="eventLocation" type="text" placeholder="Venue or city">
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Expected guests</label>
+                    <input id="guests" name="guests" type="number" placeholder="e.g. 150">
+                </div>
+                <div class="form-group">
+                    <label for="budget">Budget range</label>
+                    <input id="budget" name="budget" type="text" placeholder="e.g. $2000 - $5000">
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-top:12px;">
+                <label for="special">Special requests / notes</label>
+                <textarea id="special" name="special" placeholder="Dietary, accessibility, theme requests"></textarea>
+            </div>
+
+            <div style="margin-top:14px;">
+                <button class="btn-primary" type="submit">Submit Bio‑Data</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer>© 2026 EvePlan Events</footer>
+</body>
+</html>
