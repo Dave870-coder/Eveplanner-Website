@@ -2,13 +2,13 @@
 
 // Services data
 const services = [
-  { name: 'Wedding planning', desc: 'Comprehensive wedding planning services.' },
-  { name: 'Birthday parties', desc: 'Fun and memorable birthday celebrations.' },
-  { name: 'Corporate events', desc: 'Professional corporate event management.' },
-  { name: 'Baby & bridal showers', desc: 'Elegant showers for special occasions.' },
-  { name: 'Event decoration & styling', desc: 'Creative decorations and styling.' },
-  { name: 'Venue selection', desc: 'Finding the perfect venue for your event.' },
-  { name: 'Catering coordination', desc: 'Delicious catering services.' }
+  { name: 'Wedding planning', img: 'images/wedding.jpg', desc: 'Comprehensive wedding planning services.' },
+  { name: 'Birthday parties', img: 'images/birthday.jpg', desc: 'Fun and memorable birthday celebrations.' },
+  { name: 'Corporate events', img: 'images/corporate.jpg', desc: 'Professional corporate event management.' },
+  { name: 'Baby & bridal showers', img: 'images/showers.jpg', desc: 'Elegant showers for special occasions.' },
+  { name: 'Event decoration & styling', img: 'images/decoration.jpg', desc: 'Creative decorations and styling.' },
+  { name: 'Venue selection', img: 'images/venue.jpg', desc: 'Finding the perfect venue for your event.' },
+  { name: 'Catering coordination', img: 'images/catering.jpg', desc: 'Delicious catering services.' }
 ];
 
 // Testimonials data
@@ -27,11 +27,8 @@ function renderServices() {
   shuffled.forEach(s => {
     const card = document.createElement('div');
     card.className = 'service-card';
-    // Generate a relevant random image URL using Unsplash
-    const keyword = s.name.toLowerCase().split(' ')[0]; // Take first word as keyword
-    const randomImg = `https://source.unsplash.com/300x200/?${keyword}`;
     card.innerHTML = `
-      <img src="${randomImg}" alt="${s.name}">
+      <img src="${s.img}" alt="${s.name}">
       <h3>${s.name}</h3>
       <p>${s.desc}</p>
     `;
