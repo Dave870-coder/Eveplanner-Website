@@ -2,13 +2,13 @@
 
 // Services data
 const services = [
-  { name: 'Wedding planning', desc: 'Comprehensive wedding planning services.' },
-  { name: 'Birthday parties', desc: 'Fun and memorable birthday celebrations.' },
-  { name: 'Corporate events', desc: 'Professional corporate event management.' },
-  { name: 'Baby & bridal showers', desc: 'Elegant showers for special occasions.' },
-  { name: 'Event decoration & styling', desc: 'Creative decorations and styling.' },
-  { name: 'Venue selection', desc: 'Finding the perfect venue for your event.' },
-  { name: 'Catering coordination', desc: 'Delicious catering services.' }
+  { name: 'Wedding planning', img: 'https://images.unsplash.com/photo-8vaQKYnawHw?ixlib=rb-4.0.3&w=300&h=200&fit=crop', desc: 'Comprehensive wedding planning services.' },
+  { name: 'Birthday parties', img: 'https://images.unsplash.com/photo-18N4okmWccM?ixlib=rb-4.0.3&w=300&h=200&fit=crop', desc: 'Fun and memorable birthday celebrations.' },
+  { name: 'Corporate events', img: 'https://images.unsplash.com/photo-cW4lLTavU80?ixlib=rb-4.0.3&w=300&h=200&fit=crop', desc: 'Professional corporate event management.' },
+  { name: 'Baby & bridal showers', img: 'https://images.unsplash.com/photo-5BB_atDT4oA?ixlib=rb-4.0.3&w=300&h=200&fit=crop', desc: 'Elegant showers for special occasions.' },
+  { name: 'Event decoration & styling', img: 'https://images.unsplash.com/photo-K8KiCHh4WU4?ixlib=rb-4.0.3&w=300&h=200&fit=crop', desc: 'Creative decorations and styling.' },
+  { name: 'Venue selection', img: 'https://images.unsplash.com/photo-MYbhN8KaaEc?ixlib=rb-4.0.3&w=300&h=200&fit=crop', desc: 'Finding the perfect venue for your event.' },
+  { name: 'Catering coordination', img: 'https://images.unsplash.com/photo-GZ44SmEfMps?ixlib=rb-4.0.3&w=300&h=200&fit=crop', desc: 'Delicious catering services.' }
 ];
 
 // Testimonials data
@@ -27,11 +27,8 @@ function renderServices() {
   shuffled.forEach(s => {
     const card = document.createElement('div');
     card.className = 'service-card';
-    // Generate a relevant featured image URL using Unsplash
-    const keyword = s.name.toLowerCase().split(' ')[0]; // Take first word as keyword
-    const randomImg = `https://source.unsplash.com/featured/300x200/?${keyword}`;
     card.innerHTML = `
-      <img src="${randomImg}" alt="${s.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=Image+Loading...'">
+      <img src="${s.img}" alt="${s.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=Image+Loading...'">
       <h3>${s.name}</h3>
       <p>${s.desc}</p>
     `;
