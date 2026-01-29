@@ -1,36 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Services & FAQs</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
 </head>
 <body>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="services.html">Services & FAQs</a>
-    <a href="contact.html">Contact</a>
-    <a href="biodata.html">Bio‑Data</a>
-</nav>
 
-<div class="container">
-    <div class="card">
-        <h2>Our Services</h2>
-        <div id="services-container" class="services-grid">
-            <!-- Services will be rendered here dynamically -->
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <nav class="navbar">
+            <h1 class="logo">EvePlan.com</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html" class="active">Services & FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="biodata.html">Biodata Form</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-text">
+            <h2>Our Services</h2>
+            <p>Making every event memorable and stress-free</p>
         </div>
-    </div>
+    </header>
 
-    <div class="card">
-        <h2>FAQs</h2>
-        <p><strong>How early should I book?</strong> 2–4 weeks before the event.</p>
-        <p><strong>Do you offer customized packages?</strong> Yes.</p>
-        <p><strong>Do you handle last‑minute events?</strong> Depending on availability.</p>
-        <p><strong>Where do you operate?</strong> Within and outside the city.</p>
-    </div>
-</div>
+    <!-- SERVICES -->
+    <section class="content-container">
+        <h2 class="section-title">Our Services</h2>
 
-<footer>© 2026 EvePlan Events</footer>
-<script src="scripts.js"></script>
+        <div class="services-grid">
+
+            <div class="service-card">
+                <img src="./images/birthday.jpg" alt="Birthday party">
+                <h3>Birthday Parties</h3>
+                <p>Fun and memorable birthday celebrations.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="./images/wedding.jpg" alt="Wedding">
+                <h3>Wedding Parties</h3>
+                <p>Comprehensive wedding planning services.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="./images/catering.jpeg" alt="Catering Coordination">
+                <h3>Catering Coordination</h3>
+                <p>Delicious catering services.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="./images/corporate.jpg" alt="Corporate Events">
+                <h3>Corporate Events</h3>
+                <p>Professional corporate event management.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="./images/event.png" alt="Event Decoration">
+                <h3>Event Decoration & Styling</h3>
+                <p>Creative decorations and styling tailored to your theme.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="./images/venue.jpg" alt="Venue Selection">
+                <h3>Venue Selection</h3>
+                <p>Finding the perfect venue for your event.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="./images/babyshower.jpg" alt="Baby Shower">
+                <h3>Baby & Bridal Showers</h3>
+                <p>Elegant showers for special occasions.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-container faq-section">
+        <h2 class="section-title">FAQs</h2>
+
+        <div class="faq-item">
+            <strong>How early should I book?</strong>
+            <p>2–4 weeks before the event.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Do you offer customized packages?</strong>
+            <p>Yes.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Do you handle last-minute events?</strong>
+            <p>Depending on availability.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Where do you operate?</strong>
+            <p>Within and outside the city.</p>
+        </div>
+    </section>
+
 </body>
 </html>

@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #9cb1c4, #041946);
+}
+
+/* HERO */
+.hero {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px 0 45px;
+    color: #ffffff;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+/* HERO TEXT */
+.hero-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.hero-text h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 26px;
+}
+
+/* FORM */
+.form-container {
+    background: #ffffff;
+    width: 95%;
+    max-width: 900px; /* WIDER */
+    margin: -35px auto 40px;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003f7f;
+}
+
+/* GRID FORM */
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 20px; /* SHORTER HEIGHT */
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: block;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    font-size: 13px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #003f7f;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #002b59;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .grid-form {
+        grid-template-columns: 1fr;
+    }
+}

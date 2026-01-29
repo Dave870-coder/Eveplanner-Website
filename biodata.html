@@ -1,88 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Bio‑Data Form</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Biodata Form</title>
+    <link rel="stylesheet" href="biodata.css">
 </head>
 <body>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="services.html">Services & FAQs</a>
-    <a href="contact.html">Contact</a>
-    <a href="biodata.html">Bio‑Data</a>
-</nav>
 
-<div class="container">
-    <h2>Client Bio‑Data Form</h2>
-    <p>Please fill this form to help us understand your event needs better.</p>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <nav class="navbar">
+            <h1 class="logo">EvePlan.com</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services & FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="biodata.html" class="active">Biodata Form</a></li>
+            </ul>
+        </nav>
 
-    <div class="card form-card">
-        <form id="biodata-form">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label for="fullName">Full name</label>
-                    <input id="fullName" name="fullName" type="text" placeholder="Jane Doe" required>
-                </div>
-                <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <select id="gender" name="gender">
-                        <option value="" disabled selected>Select</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Prefer not to say</option>
-                    </select>
-                </div>
+        <div class="hero-text">
+            <h2>Plan Your Perfect Event</h2>
+            <p>Tell us the details, we’ll handle the magic</p>
+        </div>
+    </header>
 
-                <div class="form-group">
-                    <label for="phone">Phone number</label>
-                    <input id="phone" name="phone" type="tel" placeholder="+234 800 000 0000">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input id="email" name="email" type="email" placeholder="you@example.com">
-                </div>
+    <!-- FORM SECTION -->
+    <div class="form-container">
+        <h2>Event Biodata Form</h2>
 
-                <div class="form-group">
-                    <label for="address">Home address</label>
-                    <input id="address" name="address" type="text" placeholder="Street, City">
-                </div>
-                <div class="form-group">
-                    <label for="eventType">Type of event</label>
-                    <input id="eventType" name="eventType" type="text" placeholder="Wedding, Birthday, Corporate">
-                </div>
+        <form class="grid-form" action="#" method="post">
 
-                <div class="form-group">
-                    <label for="eventDate">Event date</label>
-                    <input id="eventDate" name="eventDate" type="date">
-                </div>
-                <div class="form-group">
-                    <label for="eventLocation">Event location</label>
-                    <input id="eventLocation" name="eventLocation" type="text" placeholder="Venue or city">
-                </div>
-
-                <div class="form-group">
-                    <label for="guests">Expected guests</label>
-                    <input id="guests" name="guests" type="number" placeholder="e.g. 150">
-                </div>
-                <div class="form-group">
-                    <label for="budget">Budget range</label>
-                    <input id="budget" name="budget" type="text" placeholder="e.g. $2000 - $5000">
-                </div>
+            <div>
+                <label>Full Name</label>
+                <input type="text" required>
             </div>
 
-            <div class="form-group" style="margin-top:12px;">
-                <label for="special">Special requests / notes</label>
-                <textarea id="special" name="special" placeholder="Dietary, accessibility, theme requests"></textarea>
+            <div>
+                <label>Gender</label>
+                <select required>
+                    <option value="">Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
             </div>
 
-            <div style="margin-top:14px;">
-                <button class="btn-primary" type="submit">Submit Bio‑Data</button>
+            <div>
+                <label>Phone Number</label>
+                <input type="tel" required>
             </div>
+
+            <div>
+                <label>Email Address</label>
+                <input type="email" required>
+            </div>
+
+            <div>
+                <label>Home Address</label>
+                <input type="text" required>
+            </div>
+
+            <div>
+                <label>Type of Event</label>
+                <input type="text" required>
+            </div>
+
+            <div>
+                <label>Event Date</label>
+                <input type="date" required>
+            </div>
+
+            <div>
+                <label>Event Location</label>
+                <input type="text" required>
+            </div>
+
+            <div>
+                <label>Expected Guests</label>
+                <input type="number" required>
+            </div>
+
+            <div>
+                <label>Budget Range</label>
+                <select required>
+                    <option value="">Select</option>
+                    <option>₦100k – ₦300k</option>
+                    <option>₦300k – ₦700k</option>
+                    <option>₦700k – ₦1.5M</option>
+                    <option>₦1.5M+</option>
+                </select>
+            </div>
+
+            <div class="full-width">
+                <label>Special Requests / Notes</label>
+                <textarea rows="2" required></textarea>
+            </div>
+
+            <div class="full-width">
+                <button type="submit">Submit</button>
+            </div>
+
         </form>
     </div>
-</div>
 
-<footer>© 2026 EvePlan Events</footer>
 </body>
 </html>
