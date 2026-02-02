@@ -4,7 +4,7 @@ A professional event planning website for weddings, birthdays, corporate events,
 
 ## Live Website
 
-Visit the live site: [https://davecoder120.github.io/Eve-Planner2.0/](https://davecoder120.github.io/Eve-Planner2.0/)
+Visit the live site: [https://davecoder120.github.io/Eve-Planner2.0/](https://davecoder120.github.io/Eveplanner-Web/)
 
 ## Features
 
