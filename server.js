@@ -23,14 +23,22 @@ app.use((req, res, next) => {
   // Prevent MIME-type sniffing
   res.setHeader('X-Content-Type-Options', 'nosniff');
   // Reduce referrer leakage
-  res.setHeader('Referrer-Policy', 'no-referrer');
+  res.setHeader('Referrer-Policy', 'no-referrer-when-downgrade');
   // Disable powerful features
-  res.setHeader('Permissions-Policy', "geolocation=(), microphone=(), camera=()");
+  res.setHeader('Permissions-Policy', "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()");
   // Explicitly disable old XSS filter (handled by modern CSP)
-  res.setHeader('X-XSS-Protection', '0');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  // Enforce HTTPS
+  res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+  // Disable client-side caching of sensitive data
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0');
+  res.setHeader('Pragma', 'no-cache');
+  res.setHeader('Expires', '0');
+  // Prevent MIME type confusion attacks
+  res.setHeader('X-Content-Type-Options', 'nosniff');
   // Content Security Policy - restrict where resources may be loaded from
   // Keep it conservative: allow same-origin and https resources only
-  res.setHeader('Content-Security-Policy', "default-src 'self' https:; script-src 'self' https:; connect-src 'self' https:; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; object-src 'none'; frame-ancestors 'none'; base-uri 'self';");
+  res.setHeader('Content-Security-Policy', "default-src 'self' https:; script-src 'self' https:; connect-src 'self' https:; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
   next();
 });
 
